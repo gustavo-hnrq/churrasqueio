@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "GoTask",
+    "slug": "GoTask",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/logo churras.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/logo churras.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/logo churras.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-font"
+    ]
+  }
+}
