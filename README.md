@@ -1,9 +1,8 @@
 
-# GoTask
+# Churrasqueio
 
 ## Descrição
-GoTask é um aplicativo de gerenciamento de tarefas desenvolvido utilizando React Native e Nativewind. Ele oferece a funcionalidade de criar listas e tarefas dentro dessas listas para ajudar os usuários a organizar suas atividades diárias de forma eficiente.
-
+Churrasqueio é um aplicativo para organização de churrascos desenvolvido utilizando React Native e Nativewind. Ele oferece as funcionalidade de adicionar informações do anfitrião, selecionar o número de convidados, além de poder escolher as carnes e bebidas de sua preferência, trazendo como resultado indicação de lugares para compra, receitas e a quantidade ideal de alimentos para satisfazer a todos, e o preço total estimado.
 
 
 ## Tecnologias Utilizadas
