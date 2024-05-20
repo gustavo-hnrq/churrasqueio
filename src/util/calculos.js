@@ -1,195 +1,146 @@
-function calcPicanha(qtdHomens, qtdMulheres, qtdCriancas){
+function calcularPicanha(qtdHomem, qtdMulher, qtdCrianca){
+    const picanhaHomem = qtdHomem * 51.54;
+    const picanhaMulher = qtdMulher * 34.36;
+    const picanhaCrianca = qtdCrianca * 21.47;
 
-    const picanhaHomem = qtdHomens * 51.54;
-
-    const picanhaMulher = qtdMulheres * 36.36;
-
-    const picanhaCrianca = qtdCriancas * 21.47;
-
-    const totalPicanha  = picanhaHomem + picanhaMulher + picanhaCrianca;
-
-    return totalPicanha;
-
+    const picanhaTotal = picanhaHomem + picanhaMulher + picanhaCrianca;
+    return picanhaTotal
 }
 
-function calcMaminha(qtdHomens, qtdMulheres, qtdCriancas){
+function calcularMaminha(qtdHomem, qtdMulher, qtdCrianca){
+    const maminhaHomem = qtdHomem * 30.54;
+    const maminhaMulher = qtdMulher * 20.36;
+    const maminhaCrianca = qtdCrianca * 12.72;
 
-    const maminhaHomem = qtdHomens * 30.54;
-
-    const maminhaMulher = qtdMulheres * 20.36;
-
-    const maminhaCrianca = qtdCriancas * 12.79;
-    
-    const totalMamaminha  = maminhaHomem + maminhaMulher + maminhaCrianca;
-
-    return totalMamaminha;
-
+    const maminhaTotal = maminhaHomem + maminhaMulher + maminhaCrianca;
+    return maminhaTotal
 }
 
-function calcCupim(qtdHomens, qtdMulheres, qtdCriancas){
+function calcularCupim(qtdHomem, qtdMulher, qtdCrianca){
+    const cupimHomem = qtdHomem * 26.94;
+    const cupimMulher = qtdMulher * 17.96;
+    const cupimCrianca = qtdCrianca * 11.22;
 
-    const cupimHomem = qtdHomens * 26.94;
-
-    const cupimMulher = qtdMulheres * 17.96;
-
-    const cupimCrianca = qtdCriancas * 11.22;
-    
-    const totalCupim  = cupimHomem + cupimMulher + cupimCrianca;
-
-    return totalCupim;
-    
+    const cupimTotal = cupimHomem + cupimMulher + cupimCrianca;
+    return cupimTotal
 }
 
-function calcMignon(qtdHomens, qtdMulheres, qtdCriancas){
+function calcularFile(qtdHomem, qtdMulher, qtdCrianca){
+    const fileHomem = qtdHomem * 50.94;
+    const fileMulher = qtdMulher * 33.96;
+    const fileCrianca = qtdCrianca * 21.22;
 
-    const mignonHomem = qtdHomens * 50.94;
-
-    const mignonMulher = qtdMulheres * 33.96;
-
-    const mignonCrianca = qtdCriancas * 21.22;
-    
-    const totalMignon  = mignonHomem + mignonMulher + mignonCrianca;
-
-    return totalMignon;
-    
+    const fileTotal = fileHomem + fileMulher + fileCrianca;
+    return fileTotal
 }
 
-function calcContra(qtdHomens, qtdMulheres, qtdCriancas){
+function calcularContra(qtdHomem, qtdMulher, qtdCrianca){
+    const contraHomem = qtdHomem * 20.94;
+    const contraMulher = qtdMulher * 13.96;
+    const contraCrianca = qtdCrianca * 8.72;
 
-    const contraHomem = qtdHomens * 20.94;
-
-    const contraMulher = qtdMulheres * 13.96;
-
-    const contraCrianca = qtdCriancas * 8.72;
-    
-    const totalContra  = contraHomem + contraMulher + contraCrianca;
-
-    return totalContra;
-    
+    const contraTotal = contraHomem + contraMulher + contraCrianca;
+    return contraTotal
 }
 
-function calcPaleta(qtdHomens, qtdMulheres, qtdCriancas){
+function calcularPaleta(qtdHomem, qtdMulher, qtdCrianca){
+    const paletaHomem = qtdHomem * 13.74;
+    const paletaMulher = qtdMulher * 9.16;
+    const paletaCrianca = qtdCrianca * 5.72;
 
-    const paletaHomem = qtdHomens * 13.74;
-
-    const paletaMulher = qtdMulheres * 9.16;
-
-    const paletaCrianca = qtdCriancas * 5.72;
-    
-    const totalPaleta  = paletaHomem + paletaMulher + paletaCrianca;
-
-    return totalPaleta;
-    
+    const paletaTotal = paletaHomem + paletaMulher + paletaCrianca;
+    return paletaTotal
 }
 
-function calcLinguica(qtdHomens, qtdMulheres, qtdCriancas){
+function calcularLinguica(qtdHomem, qtdMulher, qtdCrianca){
+    const linguicaHomem = qtdHomem * 14.46;
+    const linguicaMulher = qtdMulher * 9.64;
+    const linguicaCrianca = qtdCrianca * 5.72;
 
-    const linguicaHomem = qtdHomens * 14.46;
-
-    const linguicaMulher = qtdMulheres * 9.64;
-
-    const linguicaCrianca = qtdCriancas * 6.02;
-    
-    const totalLinguica  = linguicaHomem + linguicaMulher + linguicaCrianca;
-
-    return totalLinguica;
-    
+    const linguicaTotal = linguicaHomem + linguicaMulher + linguicaCrianca;
+    return linguicaTotal
 }
 
-function calcCoxa (qtdHomens, qtdMulheres, qtdCriancas){
+function calcularCoxa(qtdHomem, qtdMulher, qtdCrianca){
+    const coxaHomem = qtdHomem * 7.74;
+    const coxaMulher = qtdMulher * 5.16;
+    const coxaCrianca = qtdCrianca * 3.22;
 
-    const coxaHomem = qtdHomens * 7.74;
-
-    const coxaMulher = qtdMulheres * 5.16;
-
-    const coxaCrianca = qtdCriancas * 3.22;
-    
-    const totalCoxa  = coxaHomem + coxaMulher + coxaCrianca;
-
-    return totalCoxa;
-    
+    const coxaTotal = coxaHomem + coxaMulher + coxaCrianca;
+    return coxaTotal
 }
 
-function calcCoracao (qtdHomens, qtdMulheres, qtdCriancas){
 
-    const coracaoHomem = qtdHomens * 19.14;
+function calcularCoracao(qtdHomem, qtdMulher, qtdCrianca){
+    const coracaoHomem = qtdHomem * 19.94;
+    const coracaoMulher = qtdMulher * 12.76;
+    const coracaoCrianca = qtdCrianca * 7.97;
 
-    const coracaoMulher = qtdMulheres * 12.76;
-
-    const coracaoCrianca = qtdCriancas * 7.97;
-    
-    const totalCoracao  = coracaoHomem + coracaoMulher + coracaoCrianca;
-
-    return totalCoracao;
-    
+    const coracaoTotal = coracaoHomem + coracaoMulher + coracaoCrianca;
+    return coracaoTotal
 }
 
-function calcAsa (qtdHomens, qtdMulheres, qtdCriancas){
 
-    const asaHomem = qtdHomens * 15.24;
+function calcularAsa(qtdHomem, qtdMulher, qtdCrianca){
+    const asaHomem = qtdHomem * 15.24;
+    const asaMulher = qtdMulher * 10.16;
+    const asaCrianca = qtdCrianca * 6.35;
 
-    const asaMulher = qtdMulheres * 10.16;
-
-    const asaCrianca = qtdCriancas * 6.35;
-    
-    const totalAsa  = asaHomem + asaMulher + asaCrianca;
-
-    return totalAsa;
-    
+    const asaTotal = asaHomem + asaMulher + asaCrianca;
+    return asaTotal
 }
 
-function calcRefri (qtdHomens, qtdMulheres, qtdCriancas){
 
-    const refriHomem = qtdHomens * 2.7;
+function calcularAgua(qtdHomem, qtdMulher, qtdCrianca){
+    const aguaHomem = qtdHomem * 2;
+    const aguaMulher = qtdMulher * 2;
+    const aguaCrianca = qtdCrianca * 2;
 
-    const refriMulher = qtdMulheres * 2.16;
-
-    const refriCrianca = qtdCriancas * 1.62;
-    
-    const totalRefri  = refriHomem + refriMulher + refriCrianca;
-
-    return totalRefri;
-    
+    const aguaTotal = aguaHomem + aguaMulher + aguaCrianca;
+    return aguaTotal
 }
 
-function calcSuco (qtdHomens, qtdMulheres, qtdCriancas){
 
-    const sucoHomem = qtdHomens * 4.5;
+function calcularRefri(qtdHomem, qtdMulher, qtdCrianca){
+    const refriHomem = qtdHomem * 5;
+    const refriMulher = qtdMulher * 5;
+    const refriCrianca = qtdCrianca * 5;
 
-    const sucoMulher = qtdMulheres * 3.6;
-
-    const sucoCrianca = qtdCriancas * 2.25;
-    
-    const totalSuco  = sucoHomem + sucoMulher + sucoCrianca;
-
-    return totalSuco;
-    
+    const refriTotal = refriHomem + refriMulher + refriCrianca;
+    return refriTotal
 }
 
-function calcAgua (qtdHomens, qtdMulheres, qtdCriancas){
 
-    const aguaHomem = qtdHomens * 3;
+function calcularSuco(qtdHomem, qtdMulher, qtdCrianca){
+    const sucoHomem = qtdHomem * 3.6;
+    const sucoMulher = qtdMulher * 3.6;
+    const sucoCrianca = qtdCrianca * 3.6;
 
-    const aguaMulher = qtdMulheres * 2.5;
-
-    const aguaCrianca = qtdCriancas * 1.5;
-    
-    const totalAgua  = aguaHomem + aguaMulher + aguaCrianca;
-
-    return totalAgua;
-    
+    const sucoTotal = sucoHomem + sucoMulher + sucoCrianca;
+    return sucoTotal
 }
 
-function calcCerveja (qtdHomens, qtdMulheres, qtdCriancas){
 
-    const cervejaHomem = qtdHomens * 16.47;
+function calcularCerveja(qtdHomem, qtdMulher){
+    const cervejaHomem = qtdHomem * 5.49;
+    const cervejaMulher = qtdMulher * 5.49;
 
-    const cervejaMulher = qtdMulheres * 10.98;
-
-    const cervejaCrianca = qtdCriancas * 0;
-    
-    const totalCerveja  = cervejaHomem + cervejaMulher + cervejaCrianca;
-
-    return totalCerveja;
-    
+    const cervejaTotal = cervejaHomem + cervejaMulher;
+    return cervejaTotal
+}
+module.exports = {
+    calcularPicanha,
+    calcularMaminha,
+    calcularCupim,    
+    calcularFile,
+    calcularContra,
+    calcularPaleta,
+    calcularLinguica,
+    calcularCoxa,
+    calcularCoracao,
+    calcularAsa,
+    calcularAgua,
+    calcularRefri,
+    calcularSuco,
+    calcularCerveja
 }

@@ -1,14 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Text, View, TouchableOpacity, TextInput } from "react-native";
-import api from "../service/api";
 import NumericInput from "react-native-numeric-input";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 import Icon2 from "@expo/vector-icons/MaterialIcons";
 
-export default function TelaConvidados({ navigation }) {
+export default function TelaConvidados({ route, navigation }) {
+  const [mulheres, setMulheres] = useState(0);
+  const [homens, setHomens] = useState(0);
+  const [criancas, setCriancas] = useState(0);
+  const [total, setTotal] = useState(0);
+  useEffect(() => {
+    const convidadosTotal = mulheres + homens + criancas;
+    // console.log(navigation)
+    setTotal(convidadosTotal);
+  }, [mulheres, homens, criancas])
+  function empacotar() {
+    const { info } = route.params;
+    const convidados = { mulheres, homens, criancas, total };
 
-
-
+    navigation.navigate("TelaCarnes", { info, convidados });
+  }
   return (
     <View className="h-full px-5 mt-20 pb-14">
       <View>
@@ -30,8 +41,9 @@ export default function TelaConvidados({ navigation }) {
               Homens
             </Text>
             <NumericInput
-              id = "qtdHomens"
-              onLimitReached={(isMax, msg) => console.log(isMax, msg)}
+              value={homens}
+              onChange={value => setHomens(value)}
+              minValue={0}
               totalWidth={130}
               totalHeight={40}
               iconSize={25}
@@ -54,8 +66,9 @@ export default function TelaConvidados({ navigation }) {
               Mulheres
             </Text>
             <NumericInput
-              id = "qtdMulheres"
-              onLimitReached={(isMax, msg) => console.log(isMax, msg)}
+              value={mulheres}
+              onChange={value => setMulheres(value)}
+              minValue={0}
               totalWidth={130}
               totalHeight={40}
               iconSize={25}
@@ -81,8 +94,9 @@ export default function TelaConvidados({ navigation }) {
               Crianças
             </Text>
             <NumericInput
-              id = "qtdCriancas"
-              onLimitReached={(isMax, msg) => console.log(isMax, msg)}
+              value={criancas}
+              onChange={value => setCriancas(value)}
+              minValue={0}
               totalWidth={130}
               totalHeight={40}
               iconSize={25}
@@ -104,8 +118,13 @@ export default function TelaConvidados({ navigation }) {
             <Text className="text-lg font-poppinsMedium text-gray-400">
               Total
             </Text>
-            <NumericInput
-              onLimitReached={(isMax, msg) => console.log(isMax, msg)}
+            <TouchableOpacity className="text-center w-[130px] h-[40px]" disabled>
+              <Text className="text-center mt-[5px] text-lg">
+                {total}
+              </Text>
+            </TouchableOpacity>
+            {/* <NumericInput
+              value={total}
               totalWidth={130}
               totalHeight={40}
               iconSize={25}
@@ -116,7 +135,7 @@ export default function TelaConvidados({ navigation }) {
               iconStyle={{ color: "black" }}
               rightButtonBackgroundColor="#F5F5F5"
               leftButtonBackgroundColor="#F5F5F5"
-            />
+            /> */}
           </View>
         </View>
       </View>
@@ -124,7 +143,7 @@ export default function TelaConvidados({ navigation }) {
       <View className="items-center justify-center ">
         <TouchableOpacity
           activeOpacity={0.75}
-          onPress={() => navigation.navigate("TelaCarnes")}
+          onPress={() => { empacotar()}}
           className="bg-[#DC4105] w-full h-12 rounded-lg m-5 px-5 py-2.5 mb-5 justify-center items-center"
         >
           <Text className="font-poppinsBold text-white text-lg items-center">

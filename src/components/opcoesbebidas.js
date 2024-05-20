@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View, FlatList, Image } from "react-native";
 import { Button } from "react-native-paper";
-import cerveja from "../../assets/cerveja.png";
+
 
 const Data = [
   {
@@ -27,15 +27,16 @@ const Data = [
 ];
 
 export default class Bebidas extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       renderData: Data,
       selectedBebidas: [],
     };
+    this.dataPackage = this.dataPackage.bind(this)
   }
 
-  onPressHandler(id) {
+  async onPressHandler(id) {
     let renderData = [...this.state.renderData];
     let selectedBebidas = [...this.state.selectedBebidas];
 
@@ -45,7 +46,6 @@ export default class Bebidas extends Component {
 
         if (data.selected) {
           selectedBebidas.push(data.first_name);
-          selectedBebidas.push(data.im);
         } else {
           selectedBebidas = this.arrayRemove(
             this.state.selectedBebidas,
@@ -66,6 +66,11 @@ export default class Bebidas extends Component {
     return arr.filter(function (geeks) {
       return geeks != value;
     });
+  }
+  dataPackage() {
+    const { enviarDados } = this.props; 
+    const dados = [...this.state.selectedBebidas];
+    enviarDados(dados);
   }
   render() {
     return (
@@ -102,7 +107,7 @@ export default class Bebidas extends Component {
                     }
               }
               // onPress will call the function when button is clicked
-              onPress={() => this.onPressHandler(item.id)}
+              onPress={async () => {await this.onPressHandler(item.id); this.dataPackage()}}
             >
               <View style={styles.butao}>
                 <Image

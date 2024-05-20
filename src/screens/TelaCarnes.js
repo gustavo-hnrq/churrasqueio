@@ -1,8 +1,21 @@
-import { Text, View, TouchableOpacity } from "react-native";
-import React from "react";
-import Carnes from "../components/opcoesCarne";
+import React, { useState } from "react";
+import { View, Text, TouchableOpacity } from "react-native";
+import { Carnes } from "../components/opcoesCarne";
 
-export default function TelaCarnes({ navigation }) {
+export default function TelaCarnes({ route, navigation }) {
+  const [selectedCarnes, setSelectedCarnes] = useState([]);
+
+  const selectedOptions = (dados) => {
+    // Faça o que precisar com os dados de selectedCarnes, como enviar para outra tela
+    
+    setSelectedCarnes(dados)
+  };
+  function empacotar(){
+    const { info, convidados } = route.params;
+    const carnes = [...selectedCarnes];
+    navigation.navigate("TelaBebidas", { info, convidados, carnes });
+  }
+
   return (
     <View className="h-full px-5 mt-16">
       <View>
@@ -14,11 +27,11 @@ export default function TelaCarnes({ navigation }) {
         </Text>
       </View>
 
-      <Carnes />
+      <Carnes enviarDados={selectedOptions} />
 
       <View className="items-center justify-center">
         <TouchableOpacity
-          onPress={() => navigation.navigate("TelaBebidas")}
+          onPress={() => empacotar()}
           activeOpacity={0.75}
           className="bg-[#DC4105] w-full h-12 rounded-lg m-5 px-5 py-2.5 mb-5 justify-center items-center"
         >
